@@ -17,26 +17,22 @@ class Homepage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+
               SizedBox(
-                height: 200,
-              ),
-              SizedBox(
-                height: 200,
+                height: 290 ,
               ),
               Expanded(
                 child: Center(
                   child: Text(
-                    'TROUVAILLE INC.',
-                    style: GoogleFonts.robotoCondensed(
+                    'TROUVAILLE \n     INC.',
+                    style: GoogleFonts.roboto(
+                      letterSpacing: 10.0,
                         textStyle: TextStyle(
                       color: Colors.white,
-                      fontSize: 30,
+                      fontSize: 15,
                     )),
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 30,
               ),
               Expanded(
                 child: Center(
@@ -46,17 +42,14 @@ class Homepage extends StatelessWidget {
                       textStyle: TextStyle(
                         color: Colors.white,
                         fontSize: 70,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
                 ),
               ),
               SizedBox(
-                height: 50,
-              ),
-              SizedBox(
-                height: 100,
+                height: 200,
               ),
             ],
           ) /* add child content here */,
@@ -65,3 +58,6 @@ class Homepage extends StatelessWidget {
     );
   }
 }
+
+
+

@@ -1,4 +1,4 @@
-# angst
+# A N G S T
 
 An Application to help you when you have an Anxiety Attack.
 

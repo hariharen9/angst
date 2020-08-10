@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'initial_quiz_brain.dart';
-import 'initial_quiz_results_greater.dart';
-import 'intial_quiz_results_lesser.dart';
+import 'quiz_brain.dart';
+import 'quiz_results_greater.dart';
+import 'quiz_results_lesser.dart';
 
 QuizBrain_initial qb = QuizBrain_initial();
 const bottombarheight = 60.0;

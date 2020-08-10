@@ -1,8 +1,8 @@
-import 'initial_quiz.dart';
+import 'quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class resultGreaterThanTwo extends StatelessWidget {
+class resultLessThanTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,7 +25,7 @@ class resultGreaterThanTwo extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    'You have moderate to Severe anxiety',
+                    'You have mild to moderate anxiety',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.varela(
                       fontSize: 30,

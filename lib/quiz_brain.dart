@@ -1,5 +1,5 @@
 import 'questions.dart';
-import 'initial_quiz.dart';
+import 'quiz.dart';
 
 class QuizBrain_initial {
   List<Question> _questionBank = [

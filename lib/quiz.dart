@@ -21,30 +21,24 @@ class _InitialQuizState extends State<InitialQuiz> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: <Color>[Colors.deepPurple, Color(0xFFFDA5A0)],
-            ),
-          ),
-        ),
         title: Center(
           child: Text(
             'Do you have Anxiety?',
             style: GoogleFonts.varela(
                 textStyle: TextStyle(
-              fontWeight: FontWeight.w300,
+              fontWeight: FontWeight.w500,
+                  letterSpacing: 2.0,
             )),
           ),
         ),
+        backgroundColor: Color.alphaBlend(Color(0xFFFDA5A0), Colors.deepPurple[900]),
       ),
       body: Container(
+
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/background.jpg'),
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
           ),
         ),
         child: Column(

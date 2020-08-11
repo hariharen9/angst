@@ -27,7 +27,7 @@ class resultGreaterThanTwo extends StatelessWidget {
                   child: Text(
                     'You have moderate to Severe anxiety',
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.varela(
+                    style: GoogleFonts.roboto(
                       fontSize: 30,
                       fontWeight: FontWeight.w700,
                       color: Colors.black,

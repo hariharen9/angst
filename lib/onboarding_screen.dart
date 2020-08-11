@@ -102,7 +102,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Dont worry, We got u covered!\nThis is an app which has your back everytime you feel anxious.',
+                              'Don\'t worry, We got u covered!\nThis is an app which has your back every time you feel anxious.',
                               style: kSubtitleStyle,
                             ),
                           ],
@@ -124,7 +124,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Enojoy your life ',
+                              'Enjoy your life ',
                               style: kTitleStyle,
                             ),
                             SizedBox(height: 15.0),
@@ -156,7 +156,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Click on Get Started to really get started! Wink',
+                              'Click on Get Started to really get started! Wink ;)',
                               style: kSubtitleStyle,
                             ),
                           ],

@@ -1,9 +1,9 @@
 import 'package:angst/onboarding_screen.dart';
 
-import 'package:angst/quiz.dart';
 import 'package:flutter/material.dart';
-
 import 'home_page.dart';
+import 'more.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: OnboardingScreen(),
+      home: More(),
     );
   }
 }

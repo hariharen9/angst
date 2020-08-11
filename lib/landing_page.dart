@@ -55,64 +55,262 @@ class _LandingPageState extends State<LandingPage> {
                 ),
                 Container(
                   child: Expanded(
-                    child: Container(
-                      height: 150,
-                      width: 350,
-                      margin: EdgeInsets.fromLTRB(25, 1, 25, 25),
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFDA5A0),
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: Expanded(
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Center(
-                              child: Container(
-                                padding: EdgeInsets.all(16),
-                                height: 60,
+                    child: Opacity(
+                      opacity: 0.8,
+                      child: Container(
+                        height: 150,
+                        width: 350,
+                        margin: EdgeInsets.fromLTRB(25, 1, 25, 25),
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFDA5A0),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        child: Expanded(
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Center(
+                                child: Container(
+                                  padding: EdgeInsets.all(16),
+                                  height: 60,
+                                  child: Center(
+                                    child: FlatButton(
+                                      child: Text(
+                                        'I\'m ANXIOUS',
+                                        textAlign: TextAlign.center,
+                                        style: GoogleFonts.roboto(
+                                          textStyle: TextStyle(
+                                            letterSpacing: 5,
+                                            color: Colors.redAccent,
+                                            fontStyle: FontStyle.italic,
+                                            fontSize: 30,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        //onpressed action
+                                        print('Im anxious');
+                                      },
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Container(
+                                padding: EdgeInsets.all(4),
                                 child: Center(
                                   child: Text(
-                                    'I\'m ANXIOUS',
+                                    'Do these Simple steps\n To overcome  Anxiety',
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.roboto(
                                       textStyle: TextStyle(
-                                        letterSpacing: 5,
-                                        color: Colors.redAccent,
+                                        color: Colors.redAccent.shade700,
                                         fontStyle: FontStyle.italic,
-                                        fontSize: 30,
-                                        fontWeight: FontWeight.w600,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500,
                                       ),
                                     ),
                                   ),
                                 ),
                               ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                  width: 350,
+                  child: Divider(
+                    thickness: 2.0,
+                    color: Colors.redAccent,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.all(8),
+                    child: Text(
+                      'Editors Picks',
+                      style: GoogleFonts.audiowide(
+                        textStyle: TextStyle(
+                          fontSize: 45,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                  width: 350,
+                  child: Divider(
+                    thickness: 2.0,
+                    color: Colors.redAccent,
+                  ),
+                ),
+                SizedBox(
+                  width: 300,
+                  height: 20,
+                ),
+                Expanded(
+                  child: Opacity(
+                    opacity: 0.8,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            height: 150,
+                            margin: EdgeInsets.all(5.0),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFFDA5A0),
+                              borderRadius: BorderRadius.circular(15),
                             ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Container(
-                              padding: EdgeInsets.all(4),
-                              child: Center(
-                                child: Text(
-                                  'Do these Simple steps\n To overcome  Anxiety',
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.roboto(
-                                    textStyle: TextStyle(
-                                      color: Colors.redAccent.shade700,
-                                      fontStyle: FontStyle.italic,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w500,
-                                    ),
+                            child: Center(
+                              child: Text(
+                                'ASMR',
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.roboto(
+                                  letterSpacing: 4,
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w500,
                                   ),
                                 ),
                               ),
                             ),
-                          ],
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Container(
+                            height: 150,
+                            margin: EdgeInsets.all(5.0),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFFDA5A0),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'PODCASTS',
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.roboto(
+                                  letterSpacing: 4,
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Expanded(
+                  child: Opacity(
+                    opacity: 0.8,
+                    child: Container(
+                      height: 150,
+                      margin: EdgeInsets.all(5.0),
+                      decoration: BoxDecoration(
+                        color: Color(0xFFFDA5A0),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'READINGS',
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.roboto(
+                            letterSpacing: 4,
+                            textStyle: TextStyle(
+                              color: Colors.black,
+                              fontSize: 25,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
                         ),
                       ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 20,
+                ),
+                Expanded(
+                  child: Opacity(
+                    opacity: 0.8,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            height: 150,
+                            margin: EdgeInsets.all(5.0),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFFDA5A0),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'MORE..',
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.roboto(
+                                  letterSpacing: 4,
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(
+                          child: Container(
+                            height: 150,
+                            margin: EdgeInsets.all(5.0),
+                            decoration: BoxDecoration(
+                              color: Color(0xFFFDA5A0),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: Center(
+                              child: Text(
+                                'Weekly\nReports',
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.roboto(
+                                  letterSpacing: 4,
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

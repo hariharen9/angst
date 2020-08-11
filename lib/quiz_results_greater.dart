@@ -18,17 +18,17 @@ class resultGreaterThanTwo extends StatelessWidget {
             child: Opacity(
               opacity: 0.81,
               child: Container(
-                margin: EdgeInsets.all(45.0),
+                margin: EdgeInsets.all(35.0),
                 decoration: BoxDecoration(
                   color: activecardcolor,
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(35),
                 ),
                 child: Center(
                   child: Text(
                     'You have moderate to Severe anxiety',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.varela(
-                      fontSize: 30,
+                      fontSize: 25.0,
                       fontWeight: FontWeight.w700,
                       color: Colors.black,
                     ),

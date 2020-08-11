@@ -1,3 +1,4 @@
+import 'package:angst/landing_page.dart';
 import 'package:angst/onboarding_screen.dart';
 
 import 'package:angst/quiz.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: OnboardingScreen(),
+      home: LandingPage(),
     );
   }
 }

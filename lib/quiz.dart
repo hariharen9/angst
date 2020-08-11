@@ -20,26 +20,6 @@ class _InitialQuizState extends State<InitialQuiz> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: <Color>[Colors.deepPurple, Color(0xFFFDA5A0)],
-            ),
-          ),
-        ),
-        title: Center(
-          child: Text(
-            'Do you have Anxiety?',
-            style: GoogleFonts.varela(
-                textStyle: TextStyle(
-              fontWeight: FontWeight.w300,
-            )),
-          ),
-        ),
-      ),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -49,11 +29,36 @@ class _InitialQuizState extends State<InitialQuiz> {
         ),
         child: Column(
           children: <Widget>[
+            SizedBox(
+              height: 20,
+            ),
+            SafeArea(
+              child: Center(
+                child: Text(
+                  'Do you have Anxiety?',
+                  style: GoogleFonts.syncopate(
+                    textStyle: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                      fontSize: 23.0,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+              width: 350,
+              child: Divider(
+                thickness: 2.0,
+                color: activecardcolor,
+              ),
+            ),
             Expanded(
               child: Opacity(
                 opacity: 0.81,
                 child: Container(
-                  margin: EdgeInsets.all(45.0),
+                  margin: EdgeInsets.all(25.0),
                   decoration: BoxDecoration(
                     color: activecardcolor,
                     borderRadius: BorderRadius.circular(15),
@@ -92,7 +97,7 @@ class _QuestionState extends State<Questions> {
                 style: GoogleFonts.varela(
                   fontSize: 30,
                   fontWeight: FontWeight.w700,
-                  color: Colors.black,
+                  color: Colors.grey.shade900,
                 ),
               ),
             ),

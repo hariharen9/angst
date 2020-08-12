@@ -6,42 +6,43 @@ import 'more.dart';
 class resultLessThanTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/images/background.jpg'),
-          fit: BoxFit.cover,
+    return Material(
+      child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/background.jpg'),
+            fit: BoxFit.cover,
+          ),
         ),
-      ),
-      child: SafeArea(
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: Opacity(
-                opacity: 0.81,
-                child: Container(
-                  margin: EdgeInsets.all(15.0),
-                  decoration: BoxDecoration(
-                    color: Color(0xFFFDA5A0),
-                    borderRadius: BorderRadius.circular(25),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'You have mild to moderate anxiety',
-                      textAlign: TextAlign.center,
-                      style: GoogleFonts.varela(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
+        child: SafeArea(
+          child: Column(
+            children: <Widget>[
+              Expanded(
+                child: Opacity(
+                  opacity: 0.81,
+                  child: Container(
+                    margin: EdgeInsets.all(15.0),
+                    decoration: BoxDecoration(
+                      color: Color(0xFFFDA5A0),
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'You have Mild to Moderate anxiety',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.varela(
+                          fontSize: 25,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
                   decoration: BoxDecoration(
                     color: Color(0xFFFDA5A0),
                     borderRadius: BorderRadius.circular(35),
@@ -50,6 +51,7 @@ class resultLessThanTwo extends StatelessWidget {
                     child: Text(
                       'Close',
                       style: TextStyle(
+                        fontSize: 20,
                         color: Colors.white,
                       ),
                     ),
@@ -63,9 +65,11 @@ class resultLessThanTwo extends StatelessWidget {
                         ),
                       );
                     },
-                  )),
-            ),
-          ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

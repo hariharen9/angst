@@ -42,7 +42,7 @@ class _LandingPageState extends State<LandingPage> {
                   ),
                 ),
                 SizedBox(
-                  height: 360.0,
+                  height: 460.0,
                 ),
                 Container(
                   child: Center(
@@ -137,13 +137,13 @@ class _LandingPageState extends State<LandingPage> {
                   child: Container(
                     margin: EdgeInsets.all(8),
                     child: Text(
-                      'Editors Picks',
-                      style: GoogleFonts.audiowide(
+                      'Editors\' Picks',
+                      style: GoogleFonts.openSans(
                         textStyle: TextStyle(
-                          fontSize: 45,
+                          fontSize: 30,
+                          letterSpacing: 10,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
-                          fontStyle: FontStyle.italic,
                         ),
                       ),
                     ),
@@ -163,7 +163,7 @@ class _LandingPageState extends State<LandingPage> {
                 ),
                 Expanded(
                   child: Opacity(
-                    opacity: 0.8,
+                    opacity: 0.7,
                     child: Row(
                       children: [
                         Expanded(
@@ -226,7 +226,7 @@ class _LandingPageState extends State<LandingPage> {
                 ),
                 Expanded(
                   child: Opacity(
-                    opacity: 0.8,
+                    opacity: 0.7,
                     child: Container(
                       height: 150,
                       margin: EdgeInsets.all(5.0),
@@ -256,7 +256,7 @@ class _LandingPageState extends State<LandingPage> {
                 ),
                 Expanded(
                   child: Opacity(
-                    opacity: 0.8,
+                    opacity: 0.7,
                     child: Row(
                       children: [
                         Expanded(

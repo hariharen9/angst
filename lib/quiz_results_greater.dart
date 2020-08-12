@@ -6,6 +6,7 @@ class resultGreaterThanTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.all(25),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/background.jpg'),
@@ -28,7 +29,7 @@ class resultGreaterThanTwo extends StatelessWidget {
                     'You have moderate to Severe anxiety',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.varela(
-                      fontSize: 25.0,
+                      fontSize: 22.0,
                       fontWeight: FontWeight.w700,
                       color: Colors.black,
                     ),

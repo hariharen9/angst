@@ -33,14 +33,17 @@ class _InitialQuizState extends State<InitialQuiz> {
               height: 20,
             ),
             SafeArea(
-              child: Center(
-                child: Text(
-                  'Do you have Anxiety?',
-                  style: GoogleFonts.syncopate(
-                    textStyle: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
-                      fontSize: 23.0,
+              child: Container(
+                padding: EdgeInsets.all(20),
+                child: Center(
+                  child: Text(
+                    'Do you have Anxiety?',
+                    style: GoogleFonts.syncopate(
+                      textStyle: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        color: Colors.white,
+                        fontSize: 20.0,
+                      ),
                     ),
                   ),
                 ),

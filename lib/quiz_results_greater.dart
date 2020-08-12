@@ -25,6 +25,8 @@ class resultGreaterThanTwo extends StatelessWidget {
                   borderRadius: BorderRadius.circular(35),
                 ),
                 child: Center(
+                  child:Material(
+                    color: Color(0xFFFDA5A0),
                   child: Text(
                     'You have moderate to Severe anxiety',
                     textAlign: TextAlign.center,
@@ -34,6 +36,7 @@ class resultGreaterThanTwo extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
+                ),
                 ),
               ),
             ),

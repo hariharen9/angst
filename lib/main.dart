@@ -1,9 +1,9 @@
 import 'package:angst/landing_page.dart';
 import 'package:angst/onboarding_screen.dart';
-
+import 'more.dart';
 import 'package:angst/quiz.dart';
 import 'package:flutter/material.dart';
-
+import 'should_i_see_a_doctor.dart';
 import 'home_page.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Homepage(),
+      home: LandingPage(),
     );
   }
 }

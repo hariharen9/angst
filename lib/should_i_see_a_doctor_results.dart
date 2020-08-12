@@ -1,11 +1,12 @@
-import 'quiz.dart';
+import 'should_i_see_a_doctor.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class resultLessThanTwo extends StatelessWidget {
+class final_quiz_results extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.all(25),
       decoration: BoxDecoration(
         image: DecorationImage(
           image: AssetImage('assets/images/background.jpg'),
@@ -24,13 +25,17 @@ class resultLessThanTwo extends StatelessWidget {
                   borderRadius: BorderRadius.circular(35),
                 ),
                 child: Center(
-                  child: Material(
+                  child:Material(
                     color: Color(0xFFFDA5A0),
-                    child: Text(
-                    'You have mild to moderate anxiety',
+                      child: Text(
+                    'Yes , We think you should. Having feelings of anxiety or an anxiety disorder is normal and nothing to be ashamed of. '
+                        'No quiz can get know you as better as a health care professional.'
+                    'The sooner you have an open and honest conversation about anxiety with a health care professional,'
+                        ' the sooner you can feel better. '
+                        'Anxiety is highly treatable, and it’s possible to manage it effectively and feel fulfilled. ',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.varela(
-                      fontSize: 25,
+                      fontSize: 15.0,
                       fontWeight: FontWeight.w700,
                       color: Colors.black,
                     ),

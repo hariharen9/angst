@@ -1,4 +1,5 @@
 import 'package:angst/quiz.dart';
+import 'should_i_see_a_doctor.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -141,7 +142,14 @@ class _MoreState extends State<More> {
                         ),
                       ),
                       onPressed: (){
-                      //TODO ROUTING
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return FinalQuiz();
+                            },
+                          ),
+                        );
                       },
                     )
                   )

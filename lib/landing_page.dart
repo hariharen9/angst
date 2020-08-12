@@ -78,12 +78,12 @@ class _LandingPageState extends State<LandingPage> {
                                   child: Center(
                                     child: FlatButton(
                                       child: Text(
-                                        'I\'m ANXIOUS',
+                                        'I\'m Anxious',
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.roboto(
                                           textStyle: TextStyle(
                                             letterSpacing: 5,
-                                            color: Colors.redAccent,
+                                            color: Colors.white,
                                             fontStyle: FontStyle.italic,
                                             fontSize: 30,
                                             fontWeight: FontWeight.bold,
@@ -105,11 +105,11 @@ class _LandingPageState extends State<LandingPage> {
                                 padding: EdgeInsets.all(4),
                                 child: Center(
                                   child: Text(
-                                    'Do these Simple steps\n To overcome  Anxiety',
+                                    'Do these Simple Exercises\n To overcome  Anxiety',
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.roboto(
                                       textStyle: TextStyle(
-                                        color: Colors.redAccent.shade700,
+                                        color: Colors.black,
                                         fontStyle: FontStyle.italic,
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
@@ -130,7 +130,7 @@ class _LandingPageState extends State<LandingPage> {
                   width: 350,
                   child: Divider(
                     thickness: 2.0,
-                    color: Colors.redAccent,
+                    color: Colors.white,
                   ),
                 ),
                 Expanded(
@@ -138,7 +138,7 @@ class _LandingPageState extends State<LandingPage> {
                     margin: EdgeInsets.all(8),
                     child: Text(
                       'Editors\' Picks',
-                      style: GoogleFonts.openSans(
+                      style: GoogleFonts.roboto(
                         textStyle: TextStyle(
                           fontSize: 30,
                           letterSpacing: 10,
@@ -154,7 +154,7 @@ class _LandingPageState extends State<LandingPage> {
                   width: 350,
                   child: Divider(
                     thickness: 2.0,
-                    color: Colors.redAccent,
+                    color: Colors.white,
                   ),
                 ),
                 SizedBox(

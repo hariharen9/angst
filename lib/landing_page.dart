@@ -109,7 +109,7 @@ class _LandingPageState extends State<LandingPage> {
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.roboto(
                                       textStyle: TextStyle(
-                                        color: Colors.redAccent.shade700,
+                                        color: Colors.white,
                                         fontStyle: FontStyle.italic,
                                         fontSize: 15,
                                         fontWeight: FontWeight.w500,
@@ -163,7 +163,7 @@ class _LandingPageState extends State<LandingPage> {
                 ),
                 Expanded(
                   child: Opacity(
-                    opacity: 0.7,
+                    opacity: 0.85,
                     child: Row(
                       children: [
                         Expanded(
@@ -181,7 +181,7 @@ class _LandingPageState extends State<LandingPage> {
                                 style: GoogleFonts.roboto(
                                   letterSpacing: 4,
                                   textStyle: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontSize: 25,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -208,7 +208,7 @@ class _LandingPageState extends State<LandingPage> {
                                 style: GoogleFonts.roboto(
                                   letterSpacing: 4,
                                   textStyle: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontSize: 25,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -226,7 +226,7 @@ class _LandingPageState extends State<LandingPage> {
                 ),
                 Expanded(
                   child: Opacity(
-                    opacity: 0.7,
+                    opacity: 0.85,
                     child: Container(
                       height: 150,
                       margin: EdgeInsets.all(5.0),
@@ -241,7 +241,7 @@ class _LandingPageState extends State<LandingPage> {
                           style: GoogleFonts.roboto(
                             letterSpacing: 4,
                             textStyle: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 25,
                               fontWeight: FontWeight.w500,
                             ),
@@ -256,7 +256,7 @@ class _LandingPageState extends State<LandingPage> {
                 ),
                 Expanded(
                   child: Opacity(
-                    opacity: 0.7,
+                    opacity: 0.85,
                     child: Row(
                       children: [
                         Expanded(
@@ -274,7 +274,7 @@ class _LandingPageState extends State<LandingPage> {
                                 style: GoogleFonts.roboto(
                                   letterSpacing: 4,
                                   textStyle: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontSize: 25,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -301,7 +301,7 @@ class _LandingPageState extends State<LandingPage> {
                                 style: GoogleFonts.roboto(
                                   letterSpacing: 4,
                                   textStyle: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontSize: 25,
                                     fontWeight: FontWeight.w500,
                                   ),

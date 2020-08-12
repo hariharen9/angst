@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'styles.dart';
+import 'landing_page.dart';
 
 class OnboardingScreen extends StatefulWidget {
   @override
@@ -60,7 +61,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 Container(
                   alignment: Alignment.centerRight,
                   child: FlatButton(
-                    onPressed: () => print('Skip'),
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return LandingPage();
+                        },
+                      ),
+                    ),
                     child: Text(
                       'Skip',
                       style: TextStyle(
@@ -214,7 +222,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               width: double.infinity,
               color: Colors.white,
               child: GestureDetector(
-                onTap: () => print('Get started'),
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LandingPage();
+                    },
+                  ),
+                ),
                 child: Center(
                   child: Padding(
                     padding: EdgeInsets.only(bottom: 30.0),

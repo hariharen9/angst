@@ -1,6 +1,7 @@
 import 'package:angst/landing_page.dart';
 import 'package:angst/onboarding_screen.dart';
-
+import 'package:angst/test.dart';
+import 'more.dart';
 import 'package:angst/quiz.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Homepage(),
+      home: MyHomePage(),
     );
   }
 }

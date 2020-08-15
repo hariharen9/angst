@@ -1,15 +1,8 @@
-import 'package:angst/exercises.dart';
-import 'package:angst/landing_page.dart';
-import 'package:angst/onboarding_screen.dart';
-import 'package:angst/counter.dart';
-import 'more.dart';
-import 'package:angst/quiz.dart';
 import 'package:flutter/material.dart';
-import 'should_i_see_a_doctor.dart';
-import 'home_page.dart';
 import 'splash_screen.dart';
 import 'podcasts.dart';
 import 'asmr.dart';
+import 'package:angst/reading_content/story_1';
 
 void main() {
   runApp(MyApp());

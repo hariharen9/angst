@@ -1,3 +1,4 @@
+import 'package:angst/landing_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -44,7 +45,14 @@ class _AsmrState extends State<Asmr> {
                     ),
                   ),
                   onPressed: () {
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return LandingPage();
+                        },
+                      ),
+                    );
                   },
                 ),
               ),
@@ -52,7 +60,7 @@ class _AsmrState extends State<Asmr> {
           ),
         ),
         backgroundColor:
-        Color.alphaBlend(Color(0xFFFDA5A0), Colors.deepPurple[900]),
+            Color.alphaBlend(Color(0xFFFDA5A0), Colors.deepPurple[900]),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -61,12 +69,32 @@ class _AsmrState extends State<Asmr> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        child: ListView(
+          padding: EdgeInsets.all(10),
           children: <Widget>[
-            Text(
-                'Watching the ASMRs may also serve as a distraction from anxious thoughts while also promoting feelings of increased relaxation'
+            Center(
+              child: Container(
+                child: Text(
+                  'Watching the ASMRs may also serve as a distraction from anxious thoughts while also promoting feelings of increased relaxation',
+                  style: GoogleFonts.varela(
+                    textStyle: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              height: 10,
+              width: 350,
+              child: Divider(
+                thickness: 2,
+                color: Colors.white,
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
@@ -77,15 +105,17 @@ class _AsmrState extends State<Asmr> {
                 ),
                 child: Column(
                   children: <Widget>[
-                    SizedBox(height: 10),
                     Container(
-                      child: Text(
-                        'Jay Shetty & Zachary Levi: On growing from Anxiety , Depression and Mental Health',
-                        style: GoogleFonts.varela(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w800,
-                          color: Colors.white,
-                          letterSpacing: 1.5,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Raining Sounds -ASMR',
+                          style: GoogleFonts.varela(
+                            fontSize: 25,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.white,
+                            letterSpacing: 1.5,
+                          ),
                         ),
                       ),
                     ),
@@ -100,13 +130,13 @@ class _AsmrState extends State<Asmr> {
                               image: DecorationImage(
                                   fit: BoxFit.fill,
                                   image: NetworkImage(
-                                      'https://i.ytimg.com/vi/Cp_hDiWUKjQ/maxresdefault.jpg')),
+                                      'https://images.pexels.com/photos/3178798/pexels-photo-3178798.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')),
                               borderRadius:
-                              BorderRadius.all(Radius.circular(15.0)),
+                                  BorderRadius.all(Radius.circular(15.0)),
                             ),
                           ),
                         ),
-                        onPressed: _launchURL_ASMR1,
+                        onPressed: _launchURL_rain,
                       ),
                     ),
                   ],
@@ -124,13 +154,16 @@ class _AsmrState extends State<Asmr> {
                   children: <Widget>[
                     SizedBox(height: 10),
                     Container(
-                      child: Text(
-                        'Shann Vander Leek: Anxiety Slayer',
-                        style: GoogleFonts.varela(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w800,
-                          color: Colors.white,
-                          letterSpacing: 1.5,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Barber Shop Sounds - ASMR',
+                          style: GoogleFonts.varela(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.white,
+                            letterSpacing: 1.5,
+                          ),
                         ),
                       ),
                     ),
@@ -145,13 +178,109 @@ class _AsmrState extends State<Asmr> {
                               image: DecorationImage(
                                   fit: BoxFit.fill,
                                   image: NetworkImage(
-                                      'https://secureimg.stitcher.com/feedimageswide/480x270_52112.jpg')),
+                                      'https://images.pexels.com/photos/2076930/pexels-photo-2076930.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')),
                               borderRadius:
-                              BorderRadius.all(Radius.circular(15.0)),
+                                  BorderRadius.all(Radius.circular(15.0)),
                             ),
                           ),
                         ),
-                        onPressed: _launchURL_ASMR2,
+                        onPressed: _launchURL_barber,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: activecardcolor,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 10),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Scratching sounds - ASMR',
+                          style: GoogleFonts.varela(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.white,
+                            letterSpacing: 1.5,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(15.0),
+                      child: FlatButton(
+                        color: Color(0xFFFDA5A0),
+                        child: Expanded(
+                          child: Container(
+                            height: 150.0,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: NetworkImage(
+                                      'https://images.pexels.com/photos/3964606/pexels-photo-3964606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15.0)),
+                            ),
+                          ),
+                        ),
+                        onPressed: _launchURL_scratching,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: activecardcolor,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 10),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Glass Sounds - ASMR',
+                          style: GoogleFonts.varela(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.white,
+                            letterSpacing: 1.5,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(15.0),
+                      child: FlatButton(
+                        color: Color(0xFFFDA5A0),
+                        child: Expanded(
+                          child: Container(
+                            height: 150.0,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  fit: BoxFit.fill,
+                                  image: NetworkImage(
+                                      'https://images.pexels.com/photos/1487154/pexels-photo-1487154.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15.0)),
+                            ),
+                          ),
+                        ),
+                        onPressed: _launchURL_glass,
                       ),
                     ),
                   ],
@@ -165,18 +294,36 @@ class _AsmrState extends State<Asmr> {
   }
 }
 
-_launchURL_ASMR1() async {
-  const url =
-      'https://audiomack.com/song/trouvaille-1/jayshetty-on-purpose?key=trouvaille';
+_launchURL_rain() async {
+  const url = 'https://audiomack.com/song/trouvaille-1/rain-asmr?key=rain';
   if (await canLaunch(url)) {
     await launch(url);
   } else {
     throw 'Could not launch $url';
   }
 }
-_launchURL_ASMR2() async {
+
+_launchURL_barber() async {
+  const url = 'https://audiomack.com/trouvaille-1/song/barber-asmr';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchURL_scratching() async {
   const url =
-      'https://audiomack.com/song/trouvaille-1/anxietyslayer?key=trouvaille';
+      'https://audiomack.com/song/trouvaille-1/scratching-asmr?key=scratching';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_launchURL_glass() async {
+  const url = 'https://audiomack.com/song/trouvaille-1/glass-asmr?key=glass';
   if (await canLaunch(url)) {
     await launch(url);
   } else {

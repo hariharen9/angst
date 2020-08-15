@@ -1,7 +1,14 @@
+import 'package:intl/intl.dart';
+
+import 'package:angst/asmr.dart';
 import 'package:angst/exercises.dart';
 import 'package:angst/more.dart';
+import 'package:angst/podcasts.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+DateTime now = DateTime.now();
+String dateNow = DateFormat('yyyy-MM-dd – kk:mm').format(now);
 
 class LandingPage extends StatefulWidget {
   @override
@@ -146,8 +153,24 @@ class _LandingPageState extends State<LandingPage> {
                   child: Container(
                     margin: EdgeInsets.all(8),
                     child: Text(
-                      'Editors\' Picks',
+                      '$dateNow',
                       style: GoogleFonts.roboto(
+                        textStyle: TextStyle(
+                          fontSize: 13,
+                          letterSpacing: 7,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.all(8),
+                    child: Text(
+                      'Editors\' Picks',
+                      style: GoogleFonts.varelaRound(
                         textStyle: TextStyle(
                           fontSize: 30,
                           letterSpacing: 10,
@@ -184,15 +207,27 @@ class _LandingPageState extends State<LandingPage> {
                               borderRadius: BorderRadius.circular(15),
                             ),
                             child: Center(
-                              child: Text(
-                                'ASMR',
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.roboto(
-                                  letterSpacing: 4,
-                                  textStyle: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w500,
+                              child: FlatButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return Asmr();
+                                      },
+                                    ),
+                                  );
+                                },
+                                child: Text(
+                                  'ASMR',
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.roboto(
+                                    letterSpacing: 4,
+                                    textStyle: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w500,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -211,15 +246,27 @@ class _LandingPageState extends State<LandingPage> {
                               borderRadius: BorderRadius.circular(15),
                             ),
                             child: Center(
-                              child: Text(
-                                'PODCASTS',
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.roboto(
-                                  letterSpacing: 4,
-                                  textStyle: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w500,
+                              child: FlatButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return Podcasts();
+                                      },
+                                    ),
+                                  );
+                                },
+                                child: Text(
+                                  'PODCAST',
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.roboto(
+                                    letterSpacing: 4,
+                                    textStyle: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w500,
+                                    ),
                                   ),
                                 ),
                               ),

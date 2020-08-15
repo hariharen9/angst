@@ -10,6 +10,7 @@ import 'home_page.dart';
 import 'splash_screen.dart';
 import 'podcasts.dart';
 import 'asmr.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Podcasts(),
+      home: SplashScreen(),
     );
   }
 }

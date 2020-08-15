@@ -1,3 +1,4 @@
+import 'package:angst/landing_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -22,7 +23,7 @@ class _PodcastsState extends State<Podcasts> {
             children: [
               Expanded(
                 child: Text(
-                  'More on ANGST',
+                  'PODCASTS',
                   style: GoogleFonts.varela(
                       textStyle: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -44,7 +45,14 @@ class _PodcastsState extends State<Podcasts> {
                     ),
                   ),
                   onPressed: () {
-
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return LandingPage();
+                        },
+                      ),
+                    );
                   },
                 ),
               ),
@@ -52,7 +60,7 @@ class _PodcastsState extends State<Podcasts> {
           ),
         ),
         backgroundColor:
-        Color.alphaBlend(Color(0xFFFDA5A0), Colors.deepPurple[900]),
+            Color.alphaBlend(Color(0xFFFDA5A0), Colors.deepPurple[900]),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -67,91 +75,99 @@ class _PodcastsState extends State<Podcasts> {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: activecardcolor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(height: 10),
-                    Container(
-                      child: Text(
-                        'Jay Shetty & Zachary Levi: On growing from Anxiety , Depression and Mental Health',
-                        style: GoogleFonts.varela(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w800,
-                          color: Colors.white,
-                          letterSpacing: 1.5,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: FlatButton(
-                        color: Color(0xFFFDA5A0),
-                        child: Expanded(
-                          child: Container(
-                            height: 150.0,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: NetworkImage(
-                                      'https://i.ytimg.com/vi/Cp_hDiWUKjQ/maxresdefault.jpg')),
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(15.0)),
+              child: Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: activecardcolor,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          child: Text(
+                            'Jay Shetty & Zachary Levi: On growing from Anxiety , Depression and Mental Health',
+                            style: GoogleFonts.varela(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.white,
+                              letterSpacing: 1.5,
                             ),
                           ),
                         ),
-                        onPressed: _launchURL_Jay,
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: EdgeInsets.all(15.0),
+                        child: FlatButton(
+                          color: Color(0xFFFDA5A0),
+                          child: Expanded(
+                            child: Container(
+                              height: 150.0,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: NetworkImage(
+                                        'https://i.ytimg.com/vi/Cp_hDiWUKjQ/maxresdefault.jpg')),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15.0)),
+                              ),
+                            ),
+                          ),
+                          onPressed: _launchURL_Jay,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: activecardcolor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(height: 10),
-                    Container(
-                      child: Text(
-                        'Shann Vander Leek: Anxiety Slayer',
-                        style: GoogleFonts.varela(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w800,
-                          color: Colors.white,
-                          letterSpacing: 1.5,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: FlatButton(
-                        color: Color(0xFFFDA5A0),
-                        child: Expanded(
-                          child: Container(
-                            height: 150.0,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: NetworkImage(
-                                      'https://secureimg.stitcher.com/feedimageswide/480x270_52112.jpg')),
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(15.0)),
+              child: Expanded(
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: activecardcolor,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          child: Text(
+                            'Shann Vander Leek: Anxiety Slayer',
+                            style: GoogleFonts.varela(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.white,
+                              letterSpacing: 1.5,
                             ),
                           ),
                         ),
-                        onPressed: _launchURL_Shann,
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: EdgeInsets.all(15.0),
+                        child: FlatButton(
+                          color: Color(0xFFFDA5A0),
+                          child: Expanded(
+                            child: Container(
+                              height: 150.0,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: NetworkImage(
+                                        'https://secureimg.stitcher.com/feedimageswide/480x270_52112.jpg')),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15.0)),
+                              ),
+                            ),
+                          ),
+                          onPressed: _launchURL_Shann,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -171,6 +187,7 @@ _launchURL_Jay() async {
     throw 'Could not launch $url';
   }
 }
+
 _launchURL_Shann() async {
   const url =
       'https://audiomack.com/song/trouvaille-1/anxietyslayer?key=trouvaille';

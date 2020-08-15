@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'should_i_see_a_doctor.dart';
 import 'home_page.dart';
 import 'splash_screen.dart';
+import 'podcasts.dart';
+import 'asmr.dart';
 void main() {
   runApp(MyApp());
 }
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SplashScreen(),
+      home: Podcasts(),
     );
   }
 }

@@ -1,3 +1,5 @@
+import 'package:angst/exercises.dart';
+import 'package:angst/more.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -92,7 +94,14 @@ class _LandingPageState extends State<LandingPage> {
                                       ),
                                       onPressed: () {
                                         //onpressed action
-                                        print('Im anxious');
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) {
+                                              return Exercises();
+                                            },
+                                          ),
+                                        );
                                       },
                                     ),
                                   ),
@@ -268,17 +277,29 @@ class _LandingPageState extends State<LandingPage> {
                               borderRadius: BorderRadius.circular(15),
                             ),
                             child: Center(
-                              child: Text(
-                                'MORE..',
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.roboto(
-                                  letterSpacing: 4,
-                                  textStyle: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w500,
+                              child: FlatButton(
+                                child: Text(
+                                  'MORE..',
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.roboto(
+                                    letterSpacing: 4,
+                                    textStyle: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w500,
+                                    ),
                                   ),
                                 ),
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) {
+                                        return More();
+                                      },
+                                    ),
+                                  );
+                                },
                               ),
                             ),
                           ),

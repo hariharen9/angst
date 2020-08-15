@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'landing_page.dart';
 
 const activecardcolor = Color(0xFFFDA5A0);
 int exerciseNum = 0;
@@ -148,6 +149,31 @@ class _ExercisesState extends State<Exercises> {
                       ],
                     ),
                   ),
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Color(0xFFFDA5A0),
+                  borderRadius: BorderRadius.circular(35),
+                ),
+                child: FlatButton(
+                  child: Text(
+                    'Close',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return LandingPage();
+                        },
+                      ),
+                    );
+                  },
                 ),
               ),
             ],

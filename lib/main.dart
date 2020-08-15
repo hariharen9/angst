@@ -7,7 +7,7 @@ import 'package:angst/quiz.dart';
 import 'package:flutter/material.dart';
 import 'should_i_see_a_doctor.dart';
 import 'home_page.dart';
-
+import 'splash_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Exercises(),
+      home: SplashScreen(),
     );
   }
 }

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Story_1 extends StatefulWidget {
+class Story_3 extends StatefulWidget {
   @override
-  _Story_1State createState() => _Story_1State();
+  _Story_3State createState() => _Story_3State();
 }
 
-class _Story_1State extends State<Story_1> {
+class _Story_3State extends State<Story_3> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return  Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[

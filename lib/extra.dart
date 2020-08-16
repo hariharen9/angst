@@ -31,13 +31,15 @@ class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
-            decoration: BoxDecoration(
-      image: DecorationImage(
-        image: AssetImage('assets/images/background.jpg'),
-        fit: BoxFit.cover,
-      ),
-    )));
+    return Material(
+      child: Scaffold(
+          body: Container(
+              decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/background.jpg'),
+          fit: BoxFit.cover,
+        ),
+      ))),
+    );
   }
 }

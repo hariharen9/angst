@@ -18,8 +18,8 @@ class LandingPage extends StatefulWidget {
 class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return Material(
+      child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/images/background.jpg'),

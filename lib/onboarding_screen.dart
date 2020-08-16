@@ -233,12 +233,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 child: Center(
                   child: Padding(
                     padding: EdgeInsets.only(bottom: 30.0),
-                    child: Text(
-                      'Get started',
-                      style: TextStyle(
-                        color: Color(0xFF5B16D0),
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return LandingPage();
+                            },
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'Get started',
+                        style: TextStyle(
+                          color: Color(0xFF5B16D0),
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

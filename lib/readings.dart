@@ -1,3 +1,14 @@
+import 'package:angst/landing_page.dart';
+import 'package:angst/reading_content/illustrations_4/story_1.dart';
+import 'package:angst/reading_content/illustrations_4/story_2.dart';
+import 'package:angst/reading_content/illustrations_4/story_3.dart';
+import 'package:angst/reading_content/illustrations_4/story_4.dart';
+import 'package:angst/reading_content/things_you_want_to_know/fact_1.dart';
+import 'package:angst/reading_content/things_you_want_to_know/fact_2.dart';
+import 'package:angst/reading_content/things_you_want_to_know/fact_3.dart';
+import 'package:angst/reading_content/things_you_want_to_know/fact_4.dart';
+import 'package:angst/reading_content/things_you_want_to_know/fact_5.dart';
+import 'package:angst/reading_content/things_you_want_to_know/fact_6.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,7 +30,6 @@ class _ReadingsState extends State<Readings> {
           child: Row(
             children: [
               Expanded(
-
                 child: Text(
                   'READINGS',
                   style: GoogleFonts.varela(
@@ -43,7 +53,14 @@ class _ReadingsState extends State<Readings> {
                     ),
                   ),
                   onPressed: () {
-                    //TODO
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return LandingPage();
+                        },
+                      ),
+                    );
                   },
                 ),
               ),
@@ -51,7 +68,7 @@ class _ReadingsState extends State<Readings> {
           ),
         ),
         backgroundColor:
-        Color.alphaBlend(Color(0xFFFDA5A0), Colors.deepPurple[900]),
+            Color.alphaBlend(Color(0xFFFDA5A0), Colors.deepPurple[900]),
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -105,17 +122,28 @@ class _ReadingsState extends State<Readings> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Center(
-                          child: Container(
-                            height: 150,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: NetworkImage(
-                                      'https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/12656-4_Illustrations_of_What_Anxiety_Looks_Like-1296x728-Body_Image-01.jpg?w=1155&h=1528')),
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(15.0)),
+                          child: FlatButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Story_1();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Container(
+                              height: 150,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: NetworkImage(
+                                        'https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/12656-4_Illustrations_of_What_Anxiety_Looks_Like-1296x728-Body_Image-01.jpg?w=1155&h=1528')),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15.0)),
+                              ),
                             ),
-
                           ),
                         ),
                       ),
@@ -132,14 +160,27 @@ class _ReadingsState extends State<Readings> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Center(
-                          child: Container(height: 150,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: NetworkImage(
-                                      'https://images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/12656-4_Illustrations_of_What_Anxiety_Looks_Like-1296x728-Body_Image-02.jpg')),
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(15.0)),
+                          child: FlatButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Story_2();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Container(
+                              height: 150,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: NetworkImage(
+                                        'https://images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/12656-4_Illustrations_of_What_Anxiety_Looks_Like-1296x728-Body_Image-02.jpg')),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15.0)),
+                              ),
                             ),
                           ),
                         ),
@@ -152,7 +193,6 @@ class _ReadingsState extends State<Readings> {
             SizedBox(
               width: 20,
             ),
-
             SizedBox(
               width: 20,
             ),
@@ -170,14 +210,27 @@ class _ReadingsState extends State<Readings> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Center(
-                          child: Container(height: 150,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: NetworkImage(
-                                      'https://images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/12656-4_Illustrations_of_What_Anxiety_Looks_Like-1296x728-Body_Image-03.jpg')),
-                              borderRadius:
-                              BorderRadius.all(Radius.circular(15.0)),
+                          child: FlatButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Story_3();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Container(
+                              height: 150,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: NetworkImage(
+                                        'https://images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/12656-4_Illustrations_of_What_Anxiety_Looks_Like-1296x728-Body_Image-03.jpg')),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(15.0)),
+                              ),
                             ),
                           ),
                         ),
@@ -187,17 +240,50 @@ class _ReadingsState extends State<Readings> {
                       width: 10,
                     ),
                     Expanded(
-                      child: Container(
-                        height: 150,
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                              fit: BoxFit.fill,
-                              image: NetworkImage(
-                                  'https://images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/12656-4_Illustrations_of_What_Anxiety_Looks_Like-1296x728-Body_Image-04.jpg')),
-                          borderRadius:
-                          BorderRadius.all(Radius.circular(15.0)),
+                      child: FlatButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return Story_4();
+                              },
+                            ),
+                          );
+                        },
+                        child: Container(
+                          height: 150,
+                          margin: EdgeInsets.all(5.0),
+                          decoration: BoxDecoration(
+                            color: Color(0xFFFDA5A0),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Center(
+                            child: FlatButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return Story_1();
+                                    },
+                                  ),
+                                );
+                              },
+                              child: Container(
+                                height: 150,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      fit: BoxFit.fill,
+                                      image: NetworkImage(
+                                          'https://images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/12656-4_Illustrations_of_What_Anxiety_Looks_Like-1296x728-Body_Image-04.jpg')),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(15.0)),
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
-
                       ),
                     ),
                   ],
@@ -261,7 +347,14 @@ class _ReadingsState extends State<Readings> {
                               ),
                             ),
                             onPressed: () {
-
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Fact_1();
+                                  },
+                                ),
+                              );
                             },
                           ),
                         ),
@@ -279,22 +372,33 @@ class _ReadingsState extends State<Readings> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Center(
-                          child: Text(
-                            ' ‘Just because you can’t see my ...’',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.roboto(
-                              letterSpacing: 2,
-                              textStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
+                          child: FlatButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Fact_2();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Text(
+                              ' ‘Just because you can’t see my ...’',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.roboto(
+                                letterSpacing: 2,
+                                textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
                           ),
                         ),
                       ),
                     ),
-
                   ],
                 ),
               ),
@@ -327,7 +431,14 @@ class _ReadingsState extends State<Readings> {
                               ),
                             ),
                             onPressed: () {
-
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Fact_3();
+                                  },
+                                ),
+                              );
                             },
                           ),
                         ),
@@ -345,22 +456,33 @@ class _ReadingsState extends State<Readings> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Center(
-                          child: Text(
-                            '‘A good day for me is ...’',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.roboto(
-                              letterSpacing: 2,
-                              textStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
+                          child: FlatButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Fact_4();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Text(
+                              '‘A good day for me is ...’',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.roboto(
+                                letterSpacing: 2,
+                                textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
                           ),
                         ),
                       ),
                     ),
-
                   ],
                 ),
               ),
@@ -393,7 +515,14 @@ class _ReadingsState extends State<Readings> {
                               ),
                             ),
                             onPressed: () {
-                              //TODO
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Fact_5();
+                                  },
+                                ),
+                              );
                             },
                           ),
                         ),
@@ -411,22 +540,33 @@ class _ReadingsState extends State<Readings> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Center(
-                          child: Text(
-                            '‘I just want to be heard.’',
-                            textAlign: TextAlign.center,
-                            style: GoogleFonts.roboto(
-                              letterSpacing: 2,
-                              textStyle: TextStyle(
-                                color: Colors.black,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
+                          child: FlatButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) {
+                                    return Fact_6();
+                                  },
+                                ),
+                              );
+                            },
+                            child: Text(
+                              '‘I just want to be heard.’',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.roboto(
+                                letterSpacing: 2,
+                                textStyle: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
                           ),
                         ),
                       ),
                     ),
-
                   ],
                 ),
               ),
@@ -437,7 +577,3 @@ class _ReadingsState extends State<Readings> {
     );
   }
 }
-
-
-
-

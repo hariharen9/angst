@@ -186,7 +186,7 @@ class _ExercisesState extends State<Exercises> {
                     ),
                   ),
                   SizedBox(
-                    width: 165,
+                    width: 150,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),

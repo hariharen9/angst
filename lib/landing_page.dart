@@ -1,3 +1,4 @@
+import 'package:angst/readings.dart';
 import 'package:intl/intl.dart';
 
 import 'package:angst/asmr.dart';
@@ -29,8 +30,7 @@ class _LandingPageState extends State<LandingPage> {
           child: SafeArea(
             child: ListView(
               padding: EdgeInsets.all(15.0),
-              children: [
-
+              children: <Widget>[
                 SizedBox(
                   height: 20,
                 ),
@@ -75,66 +75,68 @@ class _LandingPageState extends State<LandingPage> {
                           color: Color(0xFFFDA5A0),
                           borderRadius: BorderRadius.circular(15),
                         ),
-                        child: Column(
-                          children: [
-                            SizedBox(
-                              height: 20,
-                            ),
-                            Center(
-                              child: Container(
-                                padding: EdgeInsets.all(16),
-                                height: 60,
-                                child: Center(
-                                  child: FlatButton(
-                                    child: Text(
-                                      'I\'m Anxious',
-                                      textAlign: TextAlign.center,
-                                      style: GoogleFonts.roboto(
-                                        textStyle: TextStyle(
-                                          letterSpacing: 5,
-                                          color: Colors.white,
-                                          fontStyle: FontStyle.italic,
-                                          fontSize: 30,
-                                          fontWeight: FontWeight.bold,
+                        child: Expanded(
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Center(
+                                child: Container(
+                                  padding: EdgeInsets.all(16),
+                                  height: 60,
+                                  child: Center(
+                                    child: FlatButton(
+                                      child: Text(
+                                        'I\'m Anxious',
+                                        textAlign: TextAlign.center,
+                                        style: GoogleFonts.roboto(
+                                          textStyle: TextStyle(
+                                            letterSpacing: 5,
+                                            color: Colors.white,
+                                            fontStyle: FontStyle.italic,
+                                            fontSize: 30,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    onPressed: () {
-                                      //onpressed action
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) {
-                                            return Exercises();
-                                          },
-                                        ),
-                                      );
-                                    },
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            Container(
-                              padding: EdgeInsets.all(4),
-                              child: Center(
-                                child: Text(
-                                  'Do these Simple Exercises\n To overcome  Anxiety',
-                                  textAlign: TextAlign.center,
-                                  style: GoogleFonts.roboto(
-                                    textStyle: TextStyle(
-                                      color: Colors.black,
-                                      fontStyle: FontStyle.italic,
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w500,
+                                      onPressed: () {
+                                        //onpressed action
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) {
+                                              return Exercises();
+                                            },
+                                          ),
+                                        );
+                                      },
                                     ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Container(
+                                padding: EdgeInsets.all(4),
+                                child: Center(
+                                  child: Text(
+                                    'Do these Simple Exercises\n To overcome  Anxiety',
+                                    textAlign: TextAlign.center,
+                                    style: GoogleFonts.roboto(
+                                      textStyle: TextStyle(
+                                        color: Colors.black,
+                                        fontStyle: FontStyle.italic,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -263,7 +265,7 @@ class _LandingPageState extends State<LandingPage> {
                                     letterSpacing: 4,
                                     textStyle: TextStyle(
                                       color: Colors.black,
-                                      fontSize: 22,
+                                      fontSize: 25,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
@@ -291,6 +293,16 @@ class _LandingPageState extends State<LandingPage> {
                       ),
                       child: Center(
                         child: FlatButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return Readings();
+                                },
+                              ),
+                            );
+                          },
                           child: Text(
                             'READINGS',
                             textAlign: TextAlign.center,

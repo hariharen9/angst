@@ -29,7 +29,7 @@ class Angst extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Splash(),
+      home: OnboardingScreen(),
     );
   }
 }

@@ -17,6 +17,10 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
+
+  PageController _controller = PageController(
+    initialPage: 0,
+  );
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -28,31 +32,30 @@ class _LandingPageState extends State<LandingPage> {
             ),
           ),
           child: SafeArea(
-            child: ListView(
-              padding: EdgeInsets.all(15.0),
-              children: <Widget>[
+            child: PageView(
+              controller: _controller,
+              scrollDirection: Axis.vertical,
+              children: [
                 SizedBox(
                   height: 20,
                 ),
                 Container(
-                  child: Expanded(
-                    child: Center(
-                      child: Text(
-                        'A N G S T',
-                        style: GoogleFonts.roboto(
-                          textStyle: TextStyle(
-                            color: Color(0xFFFDA5A0),
-                            fontSize: 50,
-                            letterSpacing: 8,
-                            fontWeight: FontWeight.w300,
-                          ),
+                  child: Center(
+                    child: Text(
+                      'A N G S T',
+                      style: GoogleFonts.roboto(
+                        textStyle: TextStyle(
+                          color: Color(0xFFFDA5A0),
+                          fontSize: 50,
+                          letterSpacing: 8,
+                          fontWeight: FontWeight.w300,
                         ),
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: 460.0,
+                  height: 440.0,
                 ),
                 Container(
                   child: Center(
@@ -64,80 +67,76 @@ class _LandingPageState extends State<LandingPage> {
                   ),
                 ),
                 Container(
-                  child: Expanded(
-                    child: Opacity(
-                      opacity: 0.8,
-                      child: Container(
-                        height: 150,
-                        width: 350,
-                        margin: EdgeInsets.fromLTRB(25, 1, 25, 25),
-                        decoration: BoxDecoration(
-                          color: Color(0xFFFDA5A0),
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Expanded(
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Center(
-                                child: Container(
-                                  padding: EdgeInsets.all(16),
-                                  height: 60,
-                                  child: Center(
-                                    child: FlatButton(
-                                      child: Text(
-                                        'I\'m Anxious',
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.roboto(
-                                          textStyle: TextStyle(
-                                            letterSpacing: 1,
-                                            color: Colors.white,
-                                            fontStyle: FontStyle.italic,
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                      onPressed: () {
-                                        //onpressed action
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) {
-                                              return Exercises();
-                                            },
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 1,
-                              ),
-                              Container(
-                                padding: EdgeInsets.all(4),
-                                child: Center(
+                  child: Opacity(
+                    opacity: 0.8,
+                    child: Container(
+                      height: 150,
+                      width: 350,
+                      margin: EdgeInsets.fromLTRB(25, 1, 25, 25),
+                      decoration: BoxDecoration(
+                        color: Color(0xFFFDA5A0),
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Center(
+                            child: Container(
+                              padding: EdgeInsets.all(16),
+                              height: 60,
+                              child: Center(
+                                child: FlatButton(
                                   child: Text(
-                                    'Do these Simple Exercises\n To overcome  Anxiety',
+                                    'I\'m Anxious',
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.roboto(
                                       textStyle: TextStyle(
-                                        color: Colors.black,
+                                        letterSpacing: 1,
+                                        color: Colors.white,
                                         fontStyle: FontStyle.italic,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.bold,
                                       ),
                                     ),
                                   ),
+                                  onPressed: () {
+                                    //onpressed action
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return Exercises();
+                                        },
+                                      ),
+                                    );
+                                  },
                                 ),
                               ),
-                            ],
+                            ),
                           ),
-                        ),
+                          SizedBox(
+                            height: 1,
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(4),
+                            child: Center(
+                              child: Text(
+                                'Do these Simple Exercises\n To overcome  Anxiety',
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.roboto(
+                                  textStyle: TextStyle(
+                                    color: Colors.black,
+                                    fontStyle: FontStyle.italic,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),

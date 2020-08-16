@@ -1,8 +1,8 @@
+import 'package:angst/reading_content/illustrations_4/story_1.dart';
 import 'package:flutter/material.dart';
 import 'splash_screen.dart';
 import 'podcasts.dart';
 import 'asmr.dart';
-import 'package:angst/reading_content/story_1';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SplashScreen(),
+      home: Story_1(),
     );
   }
 }

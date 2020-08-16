@@ -9,38 +9,56 @@ class Story_1 extends StatefulWidget {
 class _Story_1State extends State<Story_1> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Center(
-              child: Text(
-                'Like a knife stabbing you in the chest with each breath you take',
-                textAlign: TextAlign.center,
-                style: GoogleFonts.varela(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w800,
-                  color: Colors.white,
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/background.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: ListView(
+          children: <Widget>[
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Center(
+                  child: Text(
+                    'Like a knife stabbing you in the chest with each breath you take',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.varela(
+                      fontSize: 30,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ),
             ),
-          ),
-        ),
-        Container(
-          child: Text(
-            'When I\’m feeling anxious, I often feel my normal self has been replaced by a crafty impostor. Someone who looks just you, but acts like someone else entirely mostly, a lot of blank stares and fidgeting and not much interesting to say.Where did I go? I ask myself in these moments.It has an out-of-body quality to it. I’m watching the impostor from the outside, powerless to fight him off and show everyone the real me.Anxiety has decided to throw a party, and the impostor was the only person invited. How rude, my normal self thinks.There\’s a frustrating powerlessness in the moments, where no matter how hard I try, I just can\’t summon me.I know when this happens, my anxiety has kicked into full blown attack mode and I need to give myself space and time to gather my thoughts and dip into my tool bag  deep breathing, grounding techniques, journaling, therapy, exercise, sleep hygiene, and eating well.If I have the energy, I also make an effort to talk with people I trust, or hang out with a close friend and let their stories and problems occupy my mind for a moment.Eventually, my normal self always reappears, shoving the impostor out of sight. At least for a while, anyway.',
-            textAlign: TextAlign.center,
-            style: GoogleFonts.varela(
-              fontSize: 8,
-              fontWeight: FontWeight.w700,
-              color: Colors.grey.shade900,
+            Container(
+              margin: EdgeInsets.all(25.0),
+              decoration: BoxDecoration(
+                color: Color(0xFFFDA5A0),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  ' I was tempted to describe anxiety as a brain fog that clouds my thoughts, but an explosion in the brain seemed more accurate to me. Anxiety can strike my brain with such force that it smashes my thoughts into scattered bits of shrapnel flying off in all directions. What\’s left is a void, a crater of emptiness. Have you ever interacted with someone you thought could be in the middle of an anxiety attack, and noticed a blank look in their eyes, or a general lack of responsiveness? I\’m willing to bet they\’d love to give you a proper reply to your question, but in that moment their mind is a crater with nothing to give. Thoughts can feel so out of reach that I avoid social interactions entirely, to spare others from having to interact with the emptiness of my anxiety brain. Sometimes I get really frustrated by this. But the more I struggle against it, the more frozen my thoughts become.'
+                  'So how do I unfreeze myself? There\’s no easy answer, unfortunately. It\’s a matter of time, patience, and giving myself space to unwind and reflect and get back to a base level of control over my mind and body.'
+                  'Having my anxiety tool bag handy, a therapist who can give me perspective on my thoughts, and a few trusted people to talk with all help me regain that control.',
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.varela(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.grey.shade900,
+                  ),
+                ),
+              ),
             ),
-          ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }

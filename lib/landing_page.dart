@@ -29,7 +29,8 @@ class _LandingPageState extends State<LandingPage> {
           child: SafeArea(
             child: ListView(
               padding: EdgeInsets.all(15.0),
-              children: <Widget>[
+              children: [
+
                 SizedBox(
                   height: 20,
                 ),
@@ -74,68 +75,66 @@ class _LandingPageState extends State<LandingPage> {
                           color: Color(0xFFFDA5A0),
                           borderRadius: BorderRadius.circular(15),
                         ),
-                        child: Expanded(
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Center(
-                                child: Container(
-                                  padding: EdgeInsets.all(16),
-                                  height: 60,
-                                  child: Center(
-                                    child: FlatButton(
-                                      child: Text(
-                                        'I\'m Anxious',
-                                        textAlign: TextAlign.center,
-                                        style: GoogleFonts.roboto(
-                                          textStyle: TextStyle(
-                                            letterSpacing: 5,
-                                            color: Colors.white,
-                                            fontStyle: FontStyle.italic,
-                                            fontSize: 30,
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: 20,
+                            ),
+                            Center(
+                              child: Container(
+                                padding: EdgeInsets.all(16),
+                                height: 60,
+                                child: Center(
+                                  child: FlatButton(
+                                    child: Text(
+                                      'I\'m Anxious',
+                                      textAlign: TextAlign.center,
+                                      style: GoogleFonts.roboto(
+                                        textStyle: TextStyle(
+                                          letterSpacing: 5,
+                                          color: Colors.white,
+                                          fontStyle: FontStyle.italic,
+                                          fontSize: 30,
+                                          fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                      onPressed: () {
-                                        //onpressed action
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) {
-                                              return Exercises();
-                                            },
-                                          ),
-                                        );
-                                      },
+                                    ),
+                                    onPressed: () {
+                                      //onpressed action
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) {
+                                            return Exercises();
+                                          },
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(4),
+                              child: Center(
+                                child: Text(
+                                  'Do these Simple Exercises\n To overcome  Anxiety',
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.roboto(
+                                    textStyle: TextStyle(
+                                      color: Colors.black,
+                                      fontStyle: FontStyle.italic,
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                 ),
                               ),
-                              SizedBox(
-                                height: 5,
-                              ),
-                              Container(
-                                padding: EdgeInsets.all(4),
-                                child: Center(
-                                  child: Text(
-                                    'Do these Simple Exercises\n To overcome  Anxiety',
-                                    textAlign: TextAlign.center,
-                                    style: GoogleFonts.roboto(
-                                      textStyle: TextStyle(
-                                        color: Colors.black,
-                                        fontStyle: FontStyle.italic,
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -264,7 +263,7 @@ class _LandingPageState extends State<LandingPage> {
                                     letterSpacing: 4,
                                     textStyle: TextStyle(
                                       color: Colors.black,
-                                      fontSize: 25,
+                                      fontSize: 22,
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
@@ -291,15 +290,17 @@ class _LandingPageState extends State<LandingPage> {
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: Center(
-                        child: Text(
-                          'READINGS',
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.roboto(
-                            letterSpacing: 4,
-                            textStyle: TextStyle(
-                              color: Colors.black,
-                              fontSize: 25,
-                              fontWeight: FontWeight.w500,
+                        child: FlatButton(
+                          child: Text(
+                            'READINGS',
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.roboto(
+                              letterSpacing: 4,
+                              textStyle: TextStyle(
+                                color: Colors.black,
+                                fontSize: 25,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
                         ),

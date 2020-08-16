@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Story_1 extends StatefulWidget {
+class Story_4 extends StatefulWidget {
   @override
-  _Story_1State createState() => _Story_1State();
+  _Story_4State createState() => _Story_4State();
 }
 
-class _Story_1State extends State<Story_1> {
+class _Story_4State extends State<Story_4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,3 +60,4 @@ class _Story_1State extends State<Story_1> {
     );
   }
 }
+

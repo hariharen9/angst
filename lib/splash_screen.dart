@@ -20,63 +20,64 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/background.jpg'),
-              fit: BoxFit.cover,
-            ),
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/background.jpg'),
+            fit: BoxFit.cover,
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(
-                height: 290,
-              ),
-              Expanded(
-                child: Center(
-                  child: Text(
-                    'TROUVAILLE \n     INC.',
-                    style: GoogleFonts.roboto(
-                        letterSpacing: 10.0,
-                        textStyle: TextStyle(
-                          color: Colors.white,
-                          fontSize: 15,
-                        )),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Expanded(
-                child: Center(
-                  child: Text(
-                    'A N G S T',
-                    style: GoogleFonts.roboto(
+        ),
+        child: ListView(
+
+          children: <Widget>[
+            SizedBox(
+              height: 290,
+            ),
+            Expanded(
+              child: Center(
+                child: Text(
+                  'TROUVAILLE \n     INC.',
+                  style: GoogleFonts.roboto(
+                      letterSpacing: 10.0,
                       textStyle: TextStyle(
                         color: Colors.white,
-                        fontSize: 70,
-                        fontWeight: FontWeight.w600,
-                      ),
+                        fontSize: 15,
+                      )),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Expanded(
+              child: Center(
+                child: Text(
+                  'A N G S T',
+                  style: GoogleFonts.roboto(
+                    textStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: 60,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
               ),
-              SizedBox(
-                height: 200,
-              ),
-              Center(
+            ),
+            SizedBox(
+              height: 100,
+            ),
+            Container(
+              child: Center(
                 child: Row(
+
                   children: <Widget>[
                     Center(
                       child: Container(
                           child: Icon(
-                        Icons.copyright,
-                        color: Colors.white,
-                      )),
+                            Icons.copyright,
+                            color: Colors.white,
+                          )),
                     ),
                     Center(
                       child: Container(
@@ -88,10 +89,10 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                   ],
                 ),
-              )
-            ],
-          ) /* add child content here */,
-        ),
+              ),
+            )
+          ],
+        ) /* add child content here */,
       ),
     );
   }

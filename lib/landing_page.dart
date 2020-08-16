@@ -92,7 +92,7 @@ class _LandingPageState extends State<LandingPage> {
                                         textAlign: TextAlign.center,
                                         style: GoogleFonts.roboto(
                                           textStyle: TextStyle(
-                                            letterSpacing: 5,
+                                            letterSpacing: 1,
                                             color: Colors.white,
                                             fontStyle: FontStyle.italic,
                                             fontSize: 30,
@@ -116,7 +116,7 @@ class _LandingPageState extends State<LandingPage> {
                                 ),
                               ),
                               SizedBox(
-                                height: 5,
+                                height: 1,
                               ),
                               Container(
                                 padding: EdgeInsets.all(4),
@@ -259,7 +259,7 @@ class _LandingPageState extends State<LandingPage> {
                                   );
                                 },
                                 child: Text(
-                                  'PODCAST',
+                                  'POD\nCAST',
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.roboto(
                                     letterSpacing: 4,

@@ -69,9 +69,8 @@ class _PodcastsState extends State<Podcasts> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        child: ListView(
+
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(20.0),

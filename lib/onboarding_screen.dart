@@ -55,7 +55,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
             ),
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 40.0),
+              padding: EdgeInsets.symmetric(vertical: 10.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
@@ -80,7 +80,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   ),
                   Container(
-                    height: 600.0,
+                    height: 500.0,
                     child: PageView(
                       physics: ClampingScrollPhysics(),
                       controller: _pageController,
@@ -91,7 +91,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       },
                       children: <Widget>[
                         Padding(
-                          padding: EdgeInsets.all(40.0),
+                          padding: EdgeInsets.all(20.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -100,25 +100,25 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   image: AssetImage(
                                     'assets/images/onboarding0.png',
                                   ),
-                                  height: 300.0,
-                                  width: 300.0,
+                                  height: 200.0,
+                                  width: 200.0,
                                 ),
                               ),
-                              SizedBox(height: 30.0),
+                              SizedBox(height: 15.0),
                               Text(
                                 'Feeling Anxious\n at times?',
                                 style: kTitleStyle,
                               ),
-                              SizedBox(height: 15.0),
+                              SizedBox(height: 1.0),
                               Text(
-                                'Don\'t worry, We got u covered!\nThis is an app which has your back every time you feel anxious.',
+                                'Don\'t worry, We got you covered!\nThis is an app which has your back every time you feel anxious.',
                                 style: kSubtitleStyle,
                               ),
                             ],
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.all(40.0),
+                          padding: EdgeInsets.all(20.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -127,11 +127,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   image: AssetImage(
                                     'assets/images/onboarding1.png',
                                   ),
-                                  height: 300.0,
-                                  width: 300.0,
+                                  height: 200.0,
+                                  width: 200.0,
                                 ),
                               ),
-                              SizedBox(height: 30.0),
+                              SizedBox(height: 15.0),
                               Text(
                                 'Enjoy your life ',
                                 style: kTitleStyle,
@@ -145,7 +145,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.all(40.0),
+                          padding: EdgeInsets.all(20.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
@@ -154,8 +154,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                   image: AssetImage(
                                     'assets/images/onboarding2.png',
                                   ),
-                                  height: 300.0,
-                                  width: 300.0,
+                                  height: 200.0,
+                                  width: 200.0,
                                 ),
                               ),
                               SizedBox(height: 30.0),
@@ -245,12 +245,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                           );
                         },
-                        child: Text(
-                          'Get started',
-                          style: TextStyle(
-                            color: Color(0xFF5B16D0),
-                            fontSize: 20.0,
-                            fontWeight: FontWeight.bold,
+                        child: FlatButton(
+                          onPressed: (){
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return LandingPage();
+                                },
+                              ),
+                            );
+                          },
+                          child: Text(
+                            'Get started',
+                            style: TextStyle(
+                              color: Color(0xFF5B16D0),
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
                         ),
                       ),

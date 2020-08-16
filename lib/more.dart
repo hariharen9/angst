@@ -121,69 +121,75 @@ class _MoreState extends State<More> {
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: activecardcolor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: FlatButton(
-                    color: Color(0xFFFDA5A0),
-                    child: Text(
-                      'Do I have Anxiety?',
-                      style: GoogleFonts.varela(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w200,
-                        color: Colors.white,
-                        letterSpacing: 2.0,
-                      ),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return InitialQuiz();
-                          },
+              child: Opacity(
+                opacity: 0.9,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: activecardcolor,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: FlatButton(
+                      color: Color(0xFFFDA5A0),
+                      child: Text(
+                        'Do I have Anxiety?',
+                        style: GoogleFonts.varela(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                          letterSpacing: 2.0,
                         ),
-                      );
-                    },
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return InitialQuiz();
+                            },
+                          ),
+                        );
+                      },
+                    ),
                   ),
                 ),
               ),
             ),
             Padding(
               padding: const EdgeInsets.all(20.0),
-              child: Container(
-                  decoration: BoxDecoration(
-                    color: activecardcolor,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: FlatButton(
-                        color: Color(0xFFFDA5A0),
-                        child: Text(
-                          'Should I see a Doctor?',
-                          style: GoogleFonts.varela(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w200,
-                            color: Colors.white,
-                            letterSpacing: 2.0,
-                          ),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return FinalQuiz();
-                              },
+              child: Opacity(
+                opacity: 0.9,
+                child: Container(
+                    decoration: BoxDecoration(
+                      color: activecardcolor,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Padding(
+                        padding: EdgeInsets.all(15.0),
+                        child: FlatButton(
+                          color: Color(0xFFFDA5A0),
+                          child: Text(
+                            'Should I see a Doctor?',
+                            style: GoogleFonts.varela(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w900,
+                              color: Colors.white,
+                              letterSpacing: 2.0,
                             ),
-                          );
-                        },
-                      ))),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return FinalQuiz();
+                                },
+                              ),
+                            );
+                          },
+                        ))),
+              ),
             ),
           ],
         ),

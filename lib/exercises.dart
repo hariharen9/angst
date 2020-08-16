@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:angst/counter.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
@@ -151,30 +154,69 @@ class _ExercisesState extends State<Exercises> {
                   ),
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                  color: Color(0xFFFDA5A0),
-                  borderRadius: BorderRadius.circular(35),
-                ),
-                child: FlatButton(
-                  child: Text(
-                    'Close',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return LandingPage();
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xFFFDA5A0),
+                        borderRadius: BorderRadius.circular(35),
+                      ),
+                      child: FlatButton(
+                        child: Text(
+                          'Close',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return LandingPage();
+                              },
+                            ),
+                          );
                         },
                       ),
-                    );
-                  },
-                ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 185,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Color(0xFFFDA5A0),
+                        borderRadius: BorderRadius.circular(35),
+                      ),
+                      child: FlatButton(
+                        child: Text(
+                          'Breathe',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return MyHomePage();
+                              },
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

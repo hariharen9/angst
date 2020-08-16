@@ -61,17 +61,18 @@ class _MyHomePageState extends State<MyHomePage> {
                               ? Text("")
                               : Text(
                                   "Exhale!",
-                                  style: GoogleFonts.audiowide(
+                                  style: GoogleFonts.robotoCondensed(
                                     textStyle: TextStyle(
-                                      color: Colors.grey.shade600,
+                                      letterSpacing: 3,
+                                      color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 45,
+                                      fontSize: 30,
                                     ),
                                   ),
                                 ),
                         ),
                         SizedBox(
-                          height: 50,
+                          height: 20,
                         ),
                         Container(
                           child: Center(
@@ -91,7 +92,18 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                         Text(
-                          '$_counter Seconds more',
+                          '$_counter',
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.pacifico(
+                            textStyle: TextStyle(
+                              fontWeight: FontWeight.w900,
+                              fontSize: 65,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          'Seconds more',
                           textAlign: TextAlign.center,
                           style: GoogleFonts.pacifico(
                             textStyle: TextStyle(
@@ -132,7 +144,16 @@ class _MyHomePageState extends State<MyHomePage> {
                               borderRadius: BorderRadius.circular(35),
                             ),
                             child: FlatButton(
-                              onPressed: () => Exercises(),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return Exercises();
+                                    },
+                                  ),
+                                );
+                              },
                               child: Text(
                                 'CLOSE',
                                 style: TextStyle(

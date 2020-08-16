@@ -1,36 +1,43 @@
-Scaffold(
-body: Container(
-decoration: BoxDecoration(
-image: DecorationImage(
-image: AssetImage('assets/images/background.jpg'),
-fit: BoxFit.cover,
-),
-),
-child: ListView(
-children: <Widget>[
-Expanded(
-child: Padding(
-padding: EdgeInsets.all(10.0),
-child: Center(
-child: Text(
-'Like a rain cloud of negative speak following your every move',
-textAlign: TextAlign.center,
-style: GoogleFonts.varela(
-fontSize: 30,
-fontWeight: FontWeight.w800,
-color: Colors.white,
-),
-),
-),
-),
-),
-Container(
-margin: EdgeInsets.all(25.0),
-decoration: BoxDecoration(
-color: Color(0xFFFDA5A0),
-borderRadius: BorderRadius.circular(15),
-),
-child: Padding(
-padding: const EdgeInsets.all(8.0),
-child: Text(
-'One of anxiety\’s defining characteristics for me is self-judgment. A harsh, loud, stubborn voice spewing an endless stream of negativity. When my mind gets caught in this loop, it\’s tough to break out of it. Really tough.'
+import 'dart:async';
+
+import 'package:after_layout/after_layout.dart';
+import 'package:angst/onboarding_screen.dart';
+import 'package:angst/splash_screen.dart';
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+class Splash extends StatefulWidget {
+  @override
+  SplashState createState() => new SplashState();
+}
+
+class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
+  Future checkFirstSeen() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool _seen = (prefs.getBool('seen') ?? false);
+
+    if (_seen) {
+      Navigator.of(context).pushReplacement(
+          new MaterialPageRoute(builder: (context) => new SplashScreen()));
+    } else {
+      await prefs.setBool('seen', true);
+      Navigator.of(context).pushReplacement(
+          new MaterialPageRoute(builder: (context) => new OnboardingScreen()));
+    }
+  }
+
+  @override
+  void afterFirstLayout(BuildContext context) => checkFirstSeen();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Container(
+            decoration: BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage('assets/images/background.jpg'),
+        fit: BoxFit.cover,
+      ),
+    )));
+  }
+}

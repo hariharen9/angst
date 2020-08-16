@@ -53,25 +53,28 @@ class Homepage extends StatelessWidget {
               SizedBox(
                 height: 200,
               ),
-              Center(
-                child: Row(
-                  children: <Widget>[
-                    Center(
-                      child: Container(
-                          child: Icon(
-                        Icons.copyright,
-                        color: Colors.white,
-                      )),
-                    ),
-                    Center(
-                      child: Container(
-                        child: Text(
-                          '2020, Trouvaille Inc.',
-                          style: TextStyle(color: Colors.white),
+              Container(
+                child: Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Center(
+                        child: Container(
+                            child: Icon(
+                          Icons.copyright,
+                          color: Colors.white,
+                        )),
+                      ),
+                      Center(
+                        child: Container(
+                          child: Text(
+                            '2020, Trouvaille Inc.',
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               )
             ],

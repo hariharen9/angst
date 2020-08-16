@@ -351,33 +351,6 @@ class _LandingPageState extends State<LandingPage> {
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Expanded(
-                          child: Container(
-                            height: 150,
-                            margin: EdgeInsets.all(5.0),
-                            decoration: BoxDecoration(
-                              color: Color(0xFFFDA5A0),
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            child: Center(
-                              child: Text(
-                                'Weekly\nReports',
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.roboto(
-                                  letterSpacing: 4,
-                                  textStyle: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 25,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
                       ],
                     ),
                   ),

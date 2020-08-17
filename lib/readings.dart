@@ -22,6 +22,9 @@ class Readings extends StatefulWidget {
 }
 
 class _ReadingsState extends State<Readings> {
+  PageController _controller = PageController(
+    initialPage: 0,
+  );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,8 +80,9 @@ class _ReadingsState extends State<Readings> {
             fit: BoxFit.cover,
           ),
         ),
-        child: ListView(
-          padding: EdgeInsets.all(10),
+        child: PageView(
+          controller: _controller,
+          scrollDirection: Axis.vertical,
           children: <Widget>[
             Text(
               '4 Illustrations of What Anxiety Really Feels Like',

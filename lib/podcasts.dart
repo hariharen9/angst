@@ -14,6 +14,10 @@ class Podcasts extends StatefulWidget {
 }
 
 class _PodcastsState extends State<Podcasts> {
+  PageController _controller = PageController(
+    initialPage: 0,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,107 +73,11 @@ class _PodcastsState extends State<Podcasts> {
             fit: BoxFit.cover,
           ),
         ),
-        child: ListView(
-
+        child: PageView(
+          controller: _controller,
+          scrollDirection: Axis.vertical,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: activecardcolor,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          child: Text(
-                            'Jay Shetty & Zachary Levi: On growing from Anxiety , Depression and Mental Health',
-                            style: GoogleFonts.varela(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w800,
-                              color: Colors.white,
-                              letterSpacing: 1.5,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(15.0),
-                        child: FlatButton(
-                          color: Color(0xFFFDA5A0),
-                          child: Expanded(
-                            child: Container(
-                              height: 150.0,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    fit: BoxFit.fill,
-                                    image: NetworkImage(
-                                        'https://i.ytimg.com/vi/Cp_hDiWUKjQ/maxresdefault.jpg')),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(15.0)),
-                              ),
-                            ),
-                          ),
-                          onPressed: _launchURL_Jay,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: activecardcolor,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Column(
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          child: Text(
-                            'Shann Vander Leek: Anxiety Slayer',
-                            style: GoogleFonts.varela(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w800,
-                              color: Colors.white,
-                              letterSpacing: 1.5,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(15.0),
-                        child: FlatButton(
-                          color: Color(0xFFFDA5A0),
-                          child: Expanded(
-                            child: Container(
-                              height: 150.0,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    fit: BoxFit.fill,
-                                    image: NetworkImage(
-                                        'https://secureimg.stitcher.com/feedimageswide/480x270_52112.jpg')),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(15.0)),
-                              ),
-                            ),
-                          ),
-                          onPressed: _launchURL_Shann,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
+            Jayshetty(),
           ],
         ),
       ),
@@ -194,5 +102,167 @@ _launchURL_Shann() async {
     await launch(url);
   } else {
     throw 'Could not launch $url';
+  }
+}
+
+class Jayshetty extends StatefulWidget {
+  @override
+  _JayshettyState createState() => _JayshettyState();
+}
+
+class _JayshettyState extends State<Jayshetty> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+              decoration: BoxDecoration(
+                color: activecardcolor,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      child: Text(
+                        'Jay Shetty & Zachary Levi: On growing from Anxiety , Depression and Mental Health',
+                        style: GoogleFonts.varela(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white,
+                          letterSpacing: 1.5,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: FlatButton(
+                      color: Color(0xFFFDA5A0),
+                      child: Container(
+                        height: 150.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              fit: BoxFit.fill,
+                              image: NetworkImage(
+                                  'https://i.ytimg.com/vi/Cp_hDiWUKjQ/maxresdefault.jpg')),
+                          borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                        ),
+                      ),
+                      onPressed: _launchURL_Jay,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: activecardcolor,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Column(
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              child: Text(
+                                'Shann Vander Leek: Anxiety Slayer',
+                                style: GoogleFonts.varela(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w800,
+                                  color: Colors.white,
+                                  letterSpacing: 1.5,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.all(15.0),
+                            child: FlatButton(
+                              color: Color(0xFFFDA5A0),
+                              child: Container(
+                                height: 150.0,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      fit: BoxFit.fill,
+                                      image: NetworkImage(
+                                          'https://secureimg.stitcher.com/feedimageswide/480x270_52112.jpg')),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(15.0)),
+                                ),
+                              ),
+                              onPressed: _launchURL_Shann,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              )))
+    ]);
+  }
+}
+
+class Slayer extends StatefulWidget {
+  @override
+  _SlayerState createState() => _SlayerState();
+}
+
+class _SlayerState extends State<Slayer> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+            decoration: BoxDecoration(
+              color: activecardcolor,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    child: Text(
+                      'Shann Vander Leek: Anxiety Slayer',
+                      style: GoogleFonts.varela(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white,
+                        letterSpacing: 1.5,
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: FlatButton(
+                    color: Color(0xFFFDA5A0),
+                    child: Container(
+                      height: 150.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: NetworkImage(
+                                'https://secureimg.stitcher.com/feedimageswide/480x270_52112.jpg')),
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      ),
+                    ),
+                    onPressed: _launchURL_Shann,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }

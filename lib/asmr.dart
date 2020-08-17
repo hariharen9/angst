@@ -14,6 +14,10 @@ class Asmr extends StatefulWidget {
 }
 
 class _AsmrState extends State<Asmr> {
+  PageController _controller = PageController(
+    initialPage: 0,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,224 +73,12 @@ class _AsmrState extends State<Asmr> {
             fit: BoxFit.cover,
           ),
         ),
-        child: ListView(
-          padding: EdgeInsets.all(10),
-          children: <Widget>[
-            Center(
-              child: Container(
-                child: Text(
-                  'Watching the ASMRs may also serve as a distraction from anxious thoughts while also promoting feelings of increased relaxation',
-                  style: GoogleFonts.varela(
-                    textStyle: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            SizedBox(
-              height: 10,
-              width: 350,
-              child: Divider(
-                thickness: 2,
-                color: Colors.white,
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: activecardcolor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Raining Sounds -ASMR',
-                          style: GoogleFonts.varela(
-                            fontSize: 25,
-                            fontWeight: FontWeight.w800,
-                            color: Colors.white,
-                            letterSpacing: 1.5,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: FlatButton(
-                        color: Color(0xFFFDA5A0),
-                        child: Expanded(
-                          child: Container(
-                            height: 150.0,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: NetworkImage(
-                                      'https://images.pexels.com/photos/3178798/pexels-photo-3178798.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(15.0)),
-                            ),
-                          ),
-                        ),
-                        onPressed: _launchURL_rain,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: activecardcolor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(height: 10),
-                    Container(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Barber Shop Sounds - ASMR',
-                          style: GoogleFonts.varela(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w800,
-                            color: Colors.white,
-                            letterSpacing: 1.5,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: FlatButton(
-                        color: Color(0xFFFDA5A0),
-                        child: Expanded(
-                          child: Container(
-                            height: 150.0,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: NetworkImage(
-                                      'https://images.pexels.com/photos/2076930/pexels-photo-2076930.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(15.0)),
-                            ),
-                          ),
-                        ),
-                        onPressed: _launchURL_barber,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: activecardcolor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(height: 10),
-                    Container(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Scratching sounds - ASMR',
-                          style: GoogleFonts.varela(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w800,
-                            color: Colors.white,
-                            letterSpacing: 1.5,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: FlatButton(
-                        color: Color(0xFFFDA5A0),
-                        child: Expanded(
-                          child: Container(
-                            height: 150.0,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: NetworkImage(
-                                      'https://images.pexels.com/photos/3964606/pexels-photo-3964606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(15.0)),
-                            ),
-                          ),
-                        ),
-                        onPressed: _launchURL_scratching,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: activecardcolor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(height: 10),
-                    Container(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Glass Sounds - ASMR',
-                          style: GoogleFonts.varela(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w800,
-                            color: Colors.white,
-                            letterSpacing: 1.5,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: FlatButton(
-                        color: Color(0xFFFDA5A0),
-                        child: Expanded(
-                          child: Container(
-                            height: 150.0,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: NetworkImage(
-                                      'https://images.pexels.com/photos/1487154/pexels-photo-1487154.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(15.0)),
-                            ),
-                          ),
-                        ),
-                        onPressed: _launchURL_glass,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+        child: PageView(
+          controller: _controller,
+          scrollDirection: Axis.vertical,
+          children: [
+            RainBarber(),
+            GlassandOther(),
           ],
         ),
       ),
@@ -328,5 +120,236 @@ _launchURL_glass() async {
     await launch(url);
   } else {
     throw 'Could not launch $url';
+  }
+}
+
+class RainBarber extends StatefulWidget {
+  @override
+  _RainBarberState createState() => _RainBarberState();
+}
+
+class _RainBarberState extends State<RainBarber> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      Center(
+        child: Container(
+          child: Text(
+            'Watching the ASMRs may also serve as a distraction from anxious thoughts while also promoting feelings of increased relaxation',
+            style: GoogleFonts.varela(
+              textStyle: TextStyle(
+                fontSize: 18,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
+      ),
+      SizedBox(
+        height: 20,
+      ),
+      SizedBox(
+        height: 10,
+        width: 350,
+        child: Divider(
+          thickness: 2,
+          color: Colors.white,
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Container(
+          decoration: BoxDecoration(
+            color: activecardcolor,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Column(
+            children: <Widget>[
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Raining Sounds -ASMR',
+                    style: GoogleFonts.varela(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white,
+                      letterSpacing: 1.5,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(15.0),
+                child: FlatButton(
+                  color: Color(0xFFFDA5A0),
+                  child: Container(
+                    height: 150.0,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          fit: BoxFit.fill,
+                          image: NetworkImage(
+                              'https://images.pexels.com/photos/3178798/pexels-photo-3178798.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260')),
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                    ),
+                  ),
+                  onPressed: _launchURL_rain,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Container(
+          decoration: BoxDecoration(
+            color: activecardcolor,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 10),
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Barber Shop Sounds - ASMR',
+                    style: GoogleFonts.varela(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800,
+                      color: Colors.white,
+                      letterSpacing: 1.5,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(15.0),
+                child: FlatButton(
+                  color: Color(0xFFFDA5A0),
+                  child: Container(
+                    height: 150.0,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          fit: BoxFit.fill,
+                          image: NetworkImage(
+                              'https://images.pexels.com/photos/2076930/pexels-photo-2076930.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')),
+                      borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                    ),
+                  ),
+                  onPressed: _launchURL_barber,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ]);
+  }
+}
+
+class GlassandOther extends StatefulWidget {
+  @override
+  _GlassandOtherState createState() => _GlassandOtherState();
+}
+
+class _GlassandOtherState extends State<GlassandOther> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+            decoration: BoxDecoration(
+              color: activecardcolor,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 10),
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Scratching sounds - ASMR',
+                      style: GoogleFonts.varela(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white,
+                        letterSpacing: 1.5,
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: FlatButton(
+                    color: Color(0xFFFDA5A0),
+                    child: Container(
+                      height: 150.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: NetworkImage(
+                                'https://images.pexels.com/photos/3964606/pexels-photo-3964606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')),
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      ),
+                    ),
+                    onPressed: _launchURL_scratching,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+            decoration: BoxDecoration(
+              color: activecardcolor,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 10),
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Glass Sounds - ASMR',
+                      style: GoogleFonts.varela(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white,
+                        letterSpacing: 1.5,
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: FlatButton(
+                    color: Color(0xFFFDA5A0),
+                    child: Container(
+                      height: 150.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: NetworkImage(
+                                'https://images.pexels.com/photos/1487154/pexels-photo-1487154.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')),
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      ),
+                    ),
+                    onPressed: _launchURL_glass,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }

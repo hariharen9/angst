@@ -1,6 +1,6 @@
 import 'package:angst/readings.dart';
 import 'package:intl/intl.dart';
-
+import 'home_page.dart';
 import 'package:angst/asmr.dart';
 import 'package:angst/exercises.dart';
 import 'package:angst/more.dart';
@@ -54,14 +54,26 @@ class _PageOneState extends State<PageOne> {
         child: Column(children: [
       Container(
         child: Center(
-          child: Text(
-            'A N G S T',
-            style: GoogleFonts.roboto(
-              textStyle: TextStyle(
-                color: Color(0xFFFDA5A0),
-                fontSize: 50,
-                letterSpacing: 8,
-                fontWeight: FontWeight.w300,
+          child: FlatButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return Homepage();
+                  },
+                ),
+              );
+            },
+            child: Text(
+              'A N G S T',
+              style: GoogleFonts.roboto(
+                textStyle: TextStyle(
+                  color: Color(0xFFFDA5A0),
+                  fontSize: 50,
+                  letterSpacing: 8,
+                  fontWeight: FontWeight.w300,
+                ),
               ),
             ),
           ),

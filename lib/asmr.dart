@@ -242,6 +242,16 @@ class _RainBarberState extends State<RainBarber> {
                   onPressed: _launchURL_barber,
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  child: Icon(
+                    Icons.keyboard_arrow_down,
+                    size: 40,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

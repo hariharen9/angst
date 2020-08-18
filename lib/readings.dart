@@ -596,6 +596,13 @@ class _StoriesState extends State<Stories> {
             ),
           ),
         ),
+        Container(
+          child: Icon(
+            Icons.keyboard_arrow_down,
+            size: 60,
+            color: Color(0xFFFDA5A0),
+          ),
+        ),
       ],
     );
   }

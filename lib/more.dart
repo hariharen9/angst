@@ -15,6 +15,10 @@ class More extends StatefulWidget {
 }
 
 class _MoreState extends State<More> {
+  PageController _controller = PageController(
+    initialPage: 0,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,127 +74,10 @@ class _MoreState extends State<More> {
             fit: BoxFit.cover,
           ),
         ),
-        child: ListView(
-
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: activecardcolor,
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(height: 10),
-                    Container(
-                      child: Text(
-                        'Watch this amazing Ted talk \nby Dr.Olivia Remes',
-                        style: GoogleFonts.varela(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w200,
-                          color: Colors.white,
-                          letterSpacing: 2.0,
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(15.0),
-                      child: FlatButton(
-                        color: Color(0xFFFDA5A0),
-                        child: Expanded(
-                          child: Container(
-                            height: 150.0,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: NetworkImage(
-                                      'https://ethical.nyc/wp-content/uploads/2019/05/ted6.jpg')),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(15.0)),
-                            ),
-                          ),
-                        ),
-                        onPressed: _launchURL,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Opacity(
-                opacity: 0.9,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: activecardcolor,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.all(15.0),
-                    child: FlatButton(
-                      color: Color(0xFFFDA5A0),
-                      child: Text(
-                        'Do I have Anxiety?',
-                        style: GoogleFonts.varela(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w900,
-                          color: Colors.white,
-                          letterSpacing: 2.0,
-                        ),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return InitialQuiz();
-                            },
-                          ),
-                        );
-                      },
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Opacity(
-                opacity: 0.9,
-                child: Container(
-                    decoration: BoxDecoration(
-                      color: activecardcolor,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: Padding(
-                        padding: EdgeInsets.all(15.0),
-                        child: FlatButton(
-                          color: Color(0xFFFDA5A0),
-                          child: Text(
-                            'Should I see a Doctor?',
-                            style: GoogleFonts.varela(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                              letterSpacing: 2.0,
-                            ),
-                          ),
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return FinalQuiz();
-                                },
-                              ),
-                            );
-                          },
-                        ))),
-              ),
-            ),
-          ],
+        child: PageView(
+          controller: _controller,
+          scrollDirection: Axis.vertical,
+          children: <Widget>[MoreOnAngst()],
         ),
       ),
     );
@@ -204,5 +91,135 @@ _launchURL() async {
     await launch(url);
   } else {
     throw 'Could not launch $url';
+  }
+}
+
+class MoreOnAngst extends StatefulWidget {
+  @override
+  _MoreOnAngstState createState() => _MoreOnAngstState();
+}
+
+class _MoreOnAngstState extends State<MoreOnAngst> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+            decoration: BoxDecoration(
+              color: activecardcolor,
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 10),
+                Container(
+                  child: Text(
+                    'Watch this amazing Ted talk \nby Dr.Olivia Remes',
+                    style: GoogleFonts.varela(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w200,
+                      color: Colors.white,
+                      letterSpacing: 2.0,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: FlatButton(
+                    color: Color(0xFFFDA5A0),
+                    child: Container(
+                      height: 150.0,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: NetworkImage(
+                                'https://ethical.nyc/wp-content/uploads/2019/05/ted6.jpg')),
+                        borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                      ),
+                    ),
+                    onPressed: _launchURL,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Opacity(
+            opacity: 0.9,
+            child: Container(
+              width: 320,
+              decoration: BoxDecoration(
+                color: activecardcolor,
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(15.0),
+                child: FlatButton(
+                  color: Color(0xFFFDA5A0),
+                  child: Text(
+                    'Do I have Anxiety?',
+                    style: GoogleFonts.varela(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white,
+                      letterSpacing: 2.0,
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return InitialQuiz();
+                        },
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Opacity(
+            opacity: 0.9,
+            child: Container(
+                decoration: BoxDecoration(
+                  color: activecardcolor,
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: FlatButton(
+                      color: Color(0xFFFDA5A0),
+                      child: Text(
+                        'Should I see a Doctor?',
+                        style: GoogleFonts.varela(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                          letterSpacing: 2.0,
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return FinalQuiz();
+                            },
+                          ),
+                        );
+                      },
+                    ))),
+          ),
+        ),
+      ],
+    );
   }
 }

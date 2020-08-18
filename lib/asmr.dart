@@ -134,6 +134,7 @@ class _RainBarberState extends State<RainBarber> {
     return Column(children: [
       Center(
         child: Container(
+          padding: EdgeInsets.all(8),
           child: Text(
             'Watching the ASMRs may also serve as a distraction from anxious thoughts while also promoting feelings of increased relaxation',
             style: GoogleFonts.varela(
@@ -146,10 +147,10 @@ class _RainBarberState extends State<RainBarber> {
         ),
       ),
       SizedBox(
-        height: 20,
+        height: 10,
       ),
       SizedBox(
-        height: 10,
+        height: 5,
         width: 350,
         child: Divider(
           thickness: 2,
@@ -234,7 +235,7 @@ class _RainBarberState extends State<RainBarber> {
                       image: DecorationImage(
                           fit: BoxFit.fill,
                           image: NetworkImage(
-                              'https://images.pexels.com/photos/2076930/pexels-photo-2076930.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')),
+                              'https://images.unsplash.com/photo-1533808232502-bee53575c3af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')),
                       borderRadius: BorderRadius.all(Radius.circular(15.0)),
                     ),
                   ),

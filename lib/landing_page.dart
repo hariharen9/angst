@@ -34,7 +34,7 @@ class _LandingPageState extends State<LandingPage> {
           child: SafeArea(
             child: PageView(
               controller: _controller,
-              scrollDirection: Axis.vertical,
+              scrollDirection: Axis.horizontal,
               children: [PageOne(), PageTwo()],
             ),
           )),
@@ -52,6 +52,9 @@ class _PageOneState extends State<PageOne> {
   Widget build(BuildContext context) {
     return Container(
         child: Column(children: [
+      SizedBox(
+        height: 10,
+      ),
       Container(
         child: Center(
           child: FlatButton(
@@ -80,15 +83,28 @@ class _PageOneState extends State<PageOne> {
         ),
       ),
       SizedBox(
-        height: 400.0,
+        height: 390.0,
       ),
-      Container(
-        child: Center(
-          child: Icon(
-            Icons.keyboard_arrow_up,
-            size: 40,
-            color: Color(0xFFFDA5A0),
-          ),
+      Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+              child: Icon(
+                Icons.keyboard_arrow_left,
+                size: 40,
+                color: Color(0xFFFDA5A0),
+              ),
+            ),
+            Container(
+              child: Icon(
+                Icons.keyboard_arrow_left,
+                size: 40,
+                color: Color(0xFFFDA5A0),
+              ),
+            ),
+          ],
         ),
       ),
       Container(
@@ -105,7 +121,7 @@ class _PageOneState extends State<PageOne> {
             child: Column(
               children: [
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Center(
                   child: Container(
@@ -351,49 +367,47 @@ class _PageTwoState extends State<PageTwo> {
           ),
         ),
       ),
-      Expanded(
-        child: Opacity(
-          opacity: 0.7,
-          child: Row(
-            children: [
-              Expanded(
-                child: Container(
-                  height: 150,
-                  margin: EdgeInsets.all(5.0),
-                  decoration: BoxDecoration(
-                    color: Color(0xFFFDA5A0),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Center(
-                    child: FlatButton(
-                      child: Text(
-                        'MORE..',
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.roboto(
-                          letterSpacing: 4,
-                          textStyle: TextStyle(
-                            color: Colors.black,
-                            fontSize: 25,
-                            fontWeight: FontWeight.w500,
-                          ),
+      Opacity(
+        opacity: 0.7,
+        child: Row(
+          children: [
+            Expanded(
+              child: Container(
+                height: 150,
+                margin: EdgeInsets.all(5.0),
+                decoration: BoxDecoration(
+                  color: Color(0xFFFDA5A0),
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Center(
+                  child: FlatButton(
+                    child: Text(
+                      'MORE..',
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.roboto(
+                        letterSpacing: 4,
+                        textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 25,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return More();
-                            },
-                          ),
-                        );
-                      },
                     ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return More();
+                          },
+                        ),
+                      );
+                    },
                   ),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     ]);
